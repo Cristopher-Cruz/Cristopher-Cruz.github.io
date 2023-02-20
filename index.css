@@ -113,7 +113,7 @@ body {
     margin-top: 2vh; 
     font-size: 2rem;
     position: fixed;
-    right: 5rem;
+    right: 2rem;
     top: 1rem;
     /* filter: brightness(0%); */
   }
@@ -141,7 +141,7 @@ body {
     position: fixed;
     text-align: center;
   
-    right: 8rem;
+    right: 5rem;
     top: 5.5rem;
   
     background-color: #a0a0a0;
@@ -151,6 +151,67 @@ body {
     padding: 0.5rem;
   }
   
+@media screen and (max-width : 1300px) {
+    
+    .settings__code2 {
+        height: 3rem;
+      }
+      
+    #settings {
+        margin-top: 2vh; 
+        font-size: 2rem;
+        position: fixed;
+        right: 1rem;
+        top: 1rem;
+      }
+
+      #settings-block {
+        position: fixed;
+        text-align: center;
+      
+        right: 1rem;
+        top: 5.5rem;
+      
+        background-color: #a0a0a0;
+      
+        border-radius: 0.5rem;
+      
+        padding: 0.5rem;
+      }
+      
+}
+  
+@media screen and (max-width : 500px) {
+    
+    .settings__code2 {
+        height: 3rem;
+      }
+      
+    #settings {
+        margin-top: 2vh; 
+        font-size: 2rem;
+        position: fixed;
+        right: 1rem;
+        top: 7rem;
+      }
+
+      #settings-block {
+        position: fixed;
+        text-align: center;
+      
+        right: 1rem;
+        top: 11.5rem;
+      
+        background-color: #a0a0a0;
+      
+        border-radius: 0.5rem;
+      
+        padding: 0.5rem;
+      }
+      
+}
+
+
   #settings-block button {
     background-color: transparent;
   
@@ -260,7 +321,7 @@ body {
 
 
 
-/*  ************************** Light mode changes **************************  */
+/*  ************************** row **************************  */
 
 
 .row {
@@ -295,11 +356,11 @@ body {
     }
 }
 
-@media(max-width: 600px) {
+/* @media(max-width: 600px) {
     .row {
         padding: 0 var(--gutter-small);
     }
-}
+} */
 
 section {
     padding: var(--gutter-small-1) 0;
@@ -314,6 +375,18 @@ section {
 img {
     object-fit: contain;
     max-width: 100%;
+}
+
+@media screen and (max-width : 800px) {
+    /* .row {
+        max-width: var(--container-small-width);
+        margin: 0 auto 0;
+    } */
+    img {
+        object-fit: contain;
+        max-width: 90%;
+    }
+
 }
 
 
@@ -442,11 +515,11 @@ p {
     color : #821111;
 } */
 
-@media(max-width: 900px) {
+/* @media(max-width: 900px) {
     p { 
         max-width: var(--container-small-width);
     }
-}
+} */
 
 /* --------------------------------------- */
 /* ----- Buttons and Links ----- */
@@ -839,9 +912,10 @@ body:not(.user-is-tabbing) a:focus {
     margin-right: var(--gutter-medium);
 }
 
-@media(max-width: 500px) {
+
+@media(max-width: 1300px) {
     .nav {
-        justify-content: center;
+        justify-content: left;
     }
 }
 
@@ -1391,7 +1465,16 @@ a:is(:link, :active, :visited).active {
     -ms-transform: rotateX(-90deg) translateZ(125px);
     transform: rotateX(-90deg) translateZ(125px);
   }
-
+.stage {
+    width: 500px;
+    height: 400px;
+}
+@media(max-width: 1300px) {
+    .stage {
+        width: 250px;
+        height: 400px;
+    }
+}
 
 
 /* --------------------------------------- */
