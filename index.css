@@ -1626,6 +1626,13 @@ a:is(:link, :active, :visited).active {
     margin-left: -6rem;
   }
   
+ /* .slideshow-container2 {
+    max-width: auto;
+    position: relative;
+    margin: auto;
+    margin-left: -6rem;
+  } */
+  
   /* Next & previous buttons */
   .prev, .next {
     cursor: pointer;
