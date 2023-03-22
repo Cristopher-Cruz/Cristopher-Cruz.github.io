@@ -760,7 +760,7 @@ body:not(.user-is-tabbing) a:focus {
 
 /* ----- Back to Top ----- */
 
-.back-to-top {
+.scroll-up {
     position: fixed;
     bottom: 50%;
     right: 4rem;
@@ -779,18 +779,18 @@ body:not(.user-is-tabbing) a:focus {
 
 
 
-.back-to-top__image {
+.scroll-up__image {
     height: 70%;
 }
 
 @media(max-width: 900px) {
-    .back-to-top {
+    .scroll-up {
         right: 2rem;
     }
 }
 
 @media(max-width: 500px) {
-    .back-to-top {
+    .scroll-up {
         right: 1rem;
     }
 }

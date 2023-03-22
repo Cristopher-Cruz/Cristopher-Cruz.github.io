@@ -1,3 +1,94 @@
+
+function scrollDwn() {
+  window.scrollBy(0, 1000);
+}
+
+function scrollUp() {
+  window.scrollBy(0, -1000);
+}
+
+
+ /* ----------- Back To Top (Scroll up) ----------- */
+
+
+const backToTopButton = document.querySelector(".scroll-up");
+backToTopButton.style.visibility = "visible";
+let isBackToTopRendered = true;
+
+let alterStyles = (isBackToTopRendered) => {
+  backToTopButton.style.visibility = isBackToTopRendered ? "visible" : "hidden";
+  backToTopButton.style.opacity = isBackToTopRendered ? 1 : 0;
+  backToTopButton.style.transform = isBackToTopRendered ? "scale(1)" : "scale(0)";
+};
+
+window.addEventListener("scroll", () => {
+  if ( window.scrollY >= 7500) {
+    isBackToTopRendered = false;
+    alterStyles(isBackToTopRendered);
+  } 
+});
+
+
+/* ----------- Scroll down  ----------- */
+
+const scrollDownButton = document.querySelector(".scroll-down");
+scrollDownButton.style.visibility = "visible";
+let isScrollDownRendered = true;
+
+let alterStyles2 = (isScrollDownRendered) => {
+  scrollDownButton.style.visibility = isScrollDownRendered ? "visible" : "hidden";
+  scrollDownButton.style.opacity = isScrollDownRendered ? 1 : 0;
+  scrollDownButton.style.transform = isScrollDownRendered ? "scale(1)" : "scale(0)";
+};
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY >=7500) {
+    isScrollDownRendered = false;
+    alterStyles2(isScrollDownRendered);
+  }
+});
+
+
+function scrollDwn() {
+  window.scrollBy(0, 950);
+}
+
+function scrollUp() {
+  window.scrollBy(0, -1000);
+}
+/*---------------------------------------- */
+
+
+/* ----------- Back to 0  ----------- */
+
+const backto0 = document.querySelector(".back-to-0");
+let isbackto0Rendered = false;
+
+let alterStyles0 = (isbackto0Rendered) => {
+  backto0.style.visibility = isbackto0Rendered ? "visible" : "hidden";
+  backto0.style.opacity = isbackto0Rendered ? 1 : 0;
+  backto0.style.transform = isbackto0Rendered? "scale(1)" : "scale(0)";
+};
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 7500) {
+    isbackto0Rendered = true;
+    alterStyles0(isbackto0Rendered);
+  } else if (window.scrollY <= 7500) {
+    isbackto0Rendered = false;
+    alterStyles0(isbackto0Rendered);
+
+    backToTopButton.style.visibility = "visible";
+    isBackToTopRendered = true;
+    alterStyles(isBackToTopRendered);
+
+    scrollDownButton.style.visibility = "visible";
+    isScrollDownRendered = true;
+    alterStyles2(isScrollDownRendered);
+  }
+});
+
+
 function showDigit(selector, digitClass) {
   let digitHTML = document.querySelector(selector);
 
