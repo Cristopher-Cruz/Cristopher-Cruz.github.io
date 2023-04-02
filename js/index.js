@@ -1,12 +1,43 @@
+var numbClick = 0;
+var elemToGo;
 
-function scrollDwn() {
-  window.scrollBy(0, 1000);
-}
+/* ----------- Scroll down: on click  ----------- */
+$(document).ready(function() {
+ 	
+  
+  $('a[href*="#work"]').click(function(){
+    
+    var elemToGo = $(this).attr('href');
+    var speed = 50;
+    
+    if(numbClick!=0){
+      elemToGo += numbClick;
+      prevElem = elemToGo;
+
+       if(!$(elemToGo).length){ 
+         elemToGo = "#work";
+         numbClick=0; 
+       }
+    }
+    numbClick++;
+    $('html,body').animate(
+    {
+      scrollTop: $(elemToGo).offset().top
+    },speed
+    );
+    return false;
+  });
+
+});
+
+
+/* ----------- Scroll up: on click  ----------- */
 
 function scrollUp() {
+  numbClick--;
+  elemToGo = numbClick;
   window.scrollBy(0, -1000);
 }
-
 
  /* ----------- Back To Top (Scroll up) ----------- */
 
@@ -22,7 +53,7 @@ let alterStyles = (isBackToTopRendered) => {
 };
 
 window.addEventListener("scroll", () => {
-  if ( window.scrollY >= 7500) {
+  if ( window.scrollY >= 7900) {
     isBackToTopRendered = false;
     alterStyles(isBackToTopRendered);
   } 
@@ -42,21 +73,12 @@ let alterStyles2 = (isScrollDownRendered) => {
 };
 
 window.addEventListener("scroll", () => {
-  if (window.scrollY >=7500) {
+  if (window.scrollY >=7900) {
     isScrollDownRendered = false;
     alterStyles2(isScrollDownRendered);
   }
 });
 
-
-function scrollDwn() {
-  window.scrollBy(0, 950);
-}
-
-function scrollUp() {
-  window.scrollBy(0, -1000);
-}
-/*---------------------------------------- */
 
 
 /* ----------- Back to 0  ----------- */
@@ -71,10 +93,10 @@ let alterStyles0 = (isbackto0Rendered) => {
 };
 
 window.addEventListener("scroll", () => {
-  if (window.scrollY > 7500) {
+  if (window.scrollY > 7900) {
     isbackto0Rendered = true;
     alterStyles0(isbackto0Rendered);
-  } else if (window.scrollY <= 7500) {
+  } else if (window.scrollY <= 7900) {
     isbackto0Rendered = false;
     alterStyles0(isbackto0Rendered);
 
@@ -88,6 +110,7 @@ window.addEventListener("scroll", () => {
   }
 });
 
+/*---------------------------------------- */
 
 function showDigit(selector, digitClass) {
   let digitHTML = document.querySelector(selector);

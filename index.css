@@ -96,7 +96,7 @@ body {
     
 }
 
-.active { background-color: red; }
+/* .active { background-color: red; } */
 
 .ui-fluid-card
 {
@@ -366,6 +366,9 @@ section {
     padding: var(--gutter-small-1) 0;
     border-bottom: var(--border-light);
 }
+/* section:active{
+
+} */
 
 #work{
     padding: var(--gutter-normal) 0;
@@ -1071,7 +1074,16 @@ a:is(:link, :active, :visited).active {
 .work__box:not(:last-child) {
 }
 #workbox1,
-#workbox2{
+#workbox2,
+#workbox3,
+#workbox4,
+#workbox5,
+#workbox6,
+#workbox7,
+#workbox8,
+#workbox9,
+#workbox10
+{
     margin-bottom: 14rem;
 
 }
@@ -1714,7 +1726,7 @@ a:is(:link, :active, :visited).active {
     transition: background-color 0.6s ease;
   }
   
-  .active, .dot:hover {
+.dot:hover {
     background-color: #717171;
   }
   
