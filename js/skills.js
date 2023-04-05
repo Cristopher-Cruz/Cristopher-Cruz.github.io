@@ -48,7 +48,7 @@ $(document).ready(function() {
   };
   
   window.addEventListener("scroll", () => {
-    if ( window.scrollY >= 3500) {
+    if ( window.scrollY >= 1400) {
       isBackToTopRendered = false;
       alterStyles(isBackToTopRendered);
     } 
@@ -68,7 +68,7 @@ $(document).ready(function() {
   };
   
   window.addEventListener("scroll", () => {
-    if (window.scrollY >=3500) {
+    if (window.scrollY >=1400) {
       isScrollDownRendered = false;
       alterStyles2(isScrollDownRendered);
     }
@@ -95,10 +95,10 @@ $(document).ready(function() {
   };
   
   window.addEventListener("scroll", () => {
-    if (window.scrollY > 3500) {
+    if (window.scrollY > 1400) {
       isbackto0Rendered = true;
       alterStyles0(isbackto0Rendered);
-    } else if (window.scrollY <= 3500) {
+    } else if (window.scrollY <= 1400) {
       isbackto0Rendered = false;
       alterStyles0(isbackto0Rendered);
   
