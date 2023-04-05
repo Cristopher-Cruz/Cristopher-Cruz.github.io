@@ -1,43 +1,38 @@
-var numbClick = 0;
-var elemToGo;
-
-/* ----------- Scroll down: on click  ----------- */
 $(document).ready(function() {
- 	
   
-  $('a[href*="#work"]').click(function(){
-    
-    var elemToGo = $(this).attr('href');
-    var speed = 50;
-    
-    if(numbClick!=0){
-      elemToGo += numbClick;
-      prevElem = elemToGo;
-
-       if(!$(elemToGo).length){ 
-         elemToGo = "#work";
-         numbClick=0; 
-       }
-    }
-    numbClick++;
-    $('html,body').animate(
-    {
-      scrollTop: $(elemToGo).offset().top
-    },speed
-    );
-    return false;
+  var currentSection = 0;
+  var sectionPositions = [];
+  
+  // get positions of each section
+  $('section').each(function() {
+    sectionPositions.push($(this).offset().top);
   });
-
+  
+  // scroll down on click
+  $('.scroll-down').click(function(e) {
+    e.preventDefault();
+    currentSection++;
+    if (currentSection >= sectionPositions.length) {
+      currentSection = sectionPositions.length - 1;
+    }
+    $('html, body').animate({
+      scrollTop: sectionPositions[currentSection]
+    }, 30);
+  });
+  
+  // scroll up on click
+  $('.scroll-up').click(function(e) {
+    e.preventDefault();
+    currentSection--;
+    if (currentSection < 0) {
+      currentSection = 0;
+    }
+    $('html, body').animate({
+      scrollTop: sectionPositions[currentSection]
+    }, 30);
+  });
+  
 });
-
-
-/* ----------- Scroll up: on click  ----------- */
-
-function scrollUp() {
-  numbClick--;
-  elemToGo = numbClick;
-  window.scrollBy(0, -1000);
-}
 
  /* ----------- Back To Top (Scroll up) ----------- */
 
@@ -84,6 +79,13 @@ window.addEventListener("scroll", () => {
 /* ----------- Back to 0  ----------- */
 
 const backto0 = document.querySelector(".back-to-0");
+backto0.addEventListener("click", () => {
+  $('html, body').animate({
+    scrollTop: 0
+  }, 100);
+
+  currentSection = 0; // add this line
+});
 let isbackto0Rendered = false;
 
 let alterStyles0 = (isbackto0Rendered) => {
@@ -108,56 +110,5 @@ window.addEventListener("scroll", () => {
     isScrollDownRendered = true;
     alterStyles2(isScrollDownRendered);
   }
+  
 });
-
-/*---------------------------------------- */
-
-function showDigit(selector, digitClass) {
-  let digitHTML = document.querySelector(selector);
-
-  let digit = parseInt(digitClass[digitClass.length - 1]);
-  let previusDigit = digit === 0 ? 9 : digit - 1;
-
-  if(digitHTML.classList.contains(`digit-${previusDigit}`)) {
-    digitHTML.classList.replace(`digit-${previusDigit}`, `digit-${digit}`);
-  } else {
-    digitHTML.classList.add(`digit-${digit}`);
-  }
-}
-
-function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
-
-async function updateDigitalClock() {
-  while(true) {
-    await sleep(1000).then(() => {
-      let now = new Date();
-
-      let hour = now.getHours().toString();
-      let minute = now.getMinutes().toString();
-
-      if(hour.length === 1) {
-        hour = `0${hour}`;
-      }
-
-      if(minute.length === 1) {
-        minute = `0${minute}`;
-      }
-
-      let firstDigitHour = hour[0];
-      let secondDigitHour = hour[1];
-
-      let firstDigitMinute = minute[0];
-      let secondDigitMinute = minute[1];
-
-      showDigit('#hour .first-digit', `digit-${firstDigitHour}`);
-      showDigit('#hour .second-digit', `digit-${secondDigitHour}`);
-
-      showDigit('#minute .first-digit', `digit-${firstDigitMinute}`);
-      showDigit('#minute .second-digit', `digit-${secondDigitMinute}`);
-    });
-  }
-}
-
-updateDigitalClock();
