@@ -529,6 +529,13 @@ p {
 /* --------------------------------------- */
 
 a {
+    color: white;
+    font-weight: 400;
+    font-family: 'Jost', sans-serif;
+    transition: all .2s;
+    outline: 2px solid transparent;
+}
+.dark-mode a {
     color: var(--white);
     font-weight: 400;
     font-family: 'Jost', sans-serif;
@@ -843,7 +850,9 @@ body:not(.user-is-tabbing) a:focus {
     outline: none;
     color:#821111;
 }
-.back-to-0:hover{
+.back-to-0:hover,
+.dark-mode .back-to-0:hover
+{
     outline: none;
     color:#821111;
 }
@@ -853,7 +862,24 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 
+
+
 .back-to-0 {
+    border: none;
+    outline: none;
+    position: fixed;
+    color : black;
+    background-repeat: no-repeat;
+    text-decoration: none;
+    bottom: 50%;
+    right: 4rem;
+    height: 4.5rem;
+    width: 20rem;
+    visibility: hidden;
+    cursor: pointer;
+}
+
+.dark-mode .back-to-0 {
     border: none;
     outline: none;
     position: fixed;
@@ -867,6 +893,8 @@ body:not(.user-is-tabbing) a:focus {
     visibility: hidden;
     cursor: pointer;
 }
+
+
 
 .back-to-0 svg {
     border: none;
@@ -1726,10 +1754,16 @@ a:is(:link, :active, :visited).active {
     transition: background-color 0.6s ease;
   }
   
-.dot:hover {
-    background-color: #717171;
+.dot:hover, 
+.dot.active {
+    background-color: #821111;
   }
   
+
+  .dark-mode .dot:hover  {
+    background-color: #821111;
+  }
+
   /* Fading animation */
   .fade {
     -webkit-animation-name: fade;
@@ -1746,4 +1780,9 @@ a:is(:link, :active, :visited).active {
   @keyframes fade {
     from {opacity: .4}
     to {opacity: 1}
+  }
+
+  .about__text {
+    padding-left: 35px;
+
   }

@@ -13,7 +13,7 @@ $(document).ready(function() {
       e.preventDefault();
       currentSection++;
       if (currentSection >= sectionPositions.length) {
-        currentSection = sectionPositions.length - 1;
+        currentSection = 1;
       }
       $('html, body').animate({
         scrollTop: sectionPositions[currentSection]

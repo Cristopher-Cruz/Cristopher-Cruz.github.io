@@ -7,13 +7,17 @@ $(document).ready(function() {
     $('section').each(function() {
       sectionPositions.push($(this).offset().top);
     });
+
+    $('footer').each(function() {
+      sectionPositions.push($(this).offset().top);
+    });
     
     // scroll down on click
     $('.scroll-down').click(function(e) {
       e.preventDefault();
       currentSection++;
       if (currentSection >= sectionPositions.length) {
-        currentSection = sectionPositions.length - 1;
+        currentSection = 1;
       }
       $('html, body').animate({
         scrollTop: sectionPositions[currentSection]
@@ -48,7 +52,7 @@ $(document).ready(function() {
   };
   
   window.addEventListener("scroll", () => {
-    if ( window.scrollY >= 1400) {
+    if ( window.scrollY >= 1800) {
       isBackToTopRendered = false;
       alterStyles(isBackToTopRendered);
     } 
@@ -68,7 +72,7 @@ $(document).ready(function() {
   };
   
   window.addEventListener("scroll", () => {
-    if (window.scrollY >=1400) {
+    if (window.scrollY >=1800) {
       isScrollDownRendered = false;
       alterStyles2(isScrollDownRendered);
     }
@@ -95,10 +99,10 @@ $(document).ready(function() {
   };
   
   window.addEventListener("scroll", () => {
-    if (window.scrollY > 1400) {
+    if (window.scrollY > 1800) {
       isbackto0Rendered = true;
       alterStyles0(isbackto0Rendered);
-    } else if (window.scrollY <= 1400) {
+    } else if (window.scrollY <= 1800) {
       isbackto0Rendered = false;
       alterStyles0(isbackto0Rendered);
   

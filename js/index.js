@@ -13,7 +13,7 @@ $(document).ready(function() {
     e.preventDefault();
     currentSection++;
     if (currentSection >= sectionPositions.length) {
-      currentSection = sectionPositions.length - 1;
+      currentSection = 1;
     }
     $('html, body').animate({
       scrollTop: sectionPositions[currentSection]
@@ -48,10 +48,13 @@ let alterStyles = (isBackToTopRendered) => {
 };
 
 window.addEventListener("scroll", () => {
-  if ( window.scrollY >= 7900) {
+  if (window.scrollY >= $('#footer').offset().top - window.innerHeight) {
     isBackToTopRendered = false;
     alterStyles(isBackToTopRendered);
-  } 
+  } else {
+    isBackToTopRendered = true;
+    alterStyles(isBackToTopRendered);
+  }
 });
 
 
@@ -68,8 +71,11 @@ let alterStyles2 = (isScrollDownRendered) => {
 };
 
 window.addEventListener("scroll", () => {
-  if (window.scrollY >=7900) {
+  if (window.scrollY >= $('#footer').offset().top - window.innerHeight) {
     isScrollDownRendered = false;
+    alterStyles2(isScrollDownRendered);
+  } else {
+    isScrollDownRendered = true;
     alterStyles2(isScrollDownRendered);
   }
 });
@@ -95,20 +101,16 @@ let alterStyles0 = (isbackto0Rendered) => {
 };
 
 window.addEventListener("scroll", () => {
-  if (window.scrollY > 7900) {
-    isbackto0Rendered = true;
-    alterStyles0(isbackto0Rendered);
-  } else if (window.scrollY <= 7900) {
-    isbackto0Rendered = false;
-    alterStyles0(isbackto0Rendered);
-
-    backToTopButton.style.visibility = "visible";
-    isBackToTopRendered = true;
-    alterStyles(isBackToTopRendered);
-
-    scrollDownButton.style.visibility = "visible";
-    isScrollDownRendered = true;
-    alterStyles2(isScrollDownRendered);
-  }
+  const footer = document.querySelector("#footer");
+  const footerHeight = footer.offsetHeight;
+  const windowHeight = window.innerHeight;
+  const scrollPosition = window.scrollY;
   
-});
+  if (scrollPosition > windowHeight && scrollPosition + windowHeight >= document.body.offsetHeight - footerHeight && !isbackto0Rendered) {
+  isbackto0Rendered = true;
+  alterStyles0(isbackto0Rendered);
+  } else if (scrollPosition <= windowHeight && isbackto0Rendered) {
+  isbackto0Rendered = false;
+  alterStyles0(isbackto0Rendered);
+  }
+  });
