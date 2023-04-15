@@ -1071,6 +1071,23 @@ a:is(:link, :active, :visited).active {
     color: white;
 }
 
+.image-description {
+
+    position: absolute;
+    top: 90%;
+    left: 80%;
+    transform: translateY(25%);
+
+}
+
+.image-description p {
+    margin: 1.5rem 0 8.5rem;
+    max-width: var(--container-medium-width);
+    font-family: 'Jost', sans-serif;
+    font-size: var(--font-size-small);
+    color: white;
+}
+
 
 @media(max-width: 500px) {
     .header {
@@ -1793,3 +1810,4 @@ a:is(:link, :active, :visited).active {
     padding-left: 35px;
 
   }
+
