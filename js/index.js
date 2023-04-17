@@ -36,7 +36,7 @@ $(document).ready(function() {
 
  /* ----------- Back To Top (Scroll up) ----------- */
 
-
+ if (window.innerWidth >= 1400) {
 const backToTopButton = document.querySelector(".scroll-up");
 backToTopButton.style.visibility = "visible";
 let isBackToTopRendered = true;
@@ -56,10 +56,11 @@ window.addEventListener("scroll", () => {
     alterStyles(isBackToTopRendered);
   }
 });
+}
 
 
 /* ----------- Scroll down  ----------- */
-
+if (window.innerWidth >= 1400) {
 const scrollDownButton = document.querySelector(".scroll-down");
 scrollDownButton.style.visibility = "visible";
 let isScrollDownRendered = true;
@@ -79,11 +80,12 @@ window.addEventListener("scroll", () => {
     alterStyles2(isScrollDownRendered);
   }
 });
+}
 
 
 
 /* ----------- Back to 0  ----------- */
-
+if (window.innerWidth >= 1400) {
 const backto0 = document.querySelector(".back-to-0");
 backto0.addEventListener("click", () => {
   $('html, body').animate({
@@ -114,3 +116,4 @@ window.addEventListener("scroll", () => {
   alterStyles0(isbackto0Rendered);
   }
   });
+}

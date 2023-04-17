@@ -837,7 +837,7 @@ body:not(.user-is-tabbing) a:focus {
     transform: rotate(180deg);
 }
 
-@media(max-width: 900px) {
+/* @media(max-width: 900px) {
     .scroll-down {
         right: 2rem;
     }
@@ -847,7 +847,7 @@ body:not(.user-is-tabbing) a:focus {
     .scroll-down {
         right: 1rem;
     }
-}
+} */
 
 
 

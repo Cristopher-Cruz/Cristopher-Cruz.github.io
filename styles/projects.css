@@ -80,7 +80,7 @@ object-fit: contain;
 max-width: auto;
 position: relative;
 margin: auto;
-margin-left: -6rem;
+margin-left: 0 rem;
 }
 
 /* .slideshow-container2 {
