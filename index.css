@@ -255,6 +255,12 @@ body {
     color: var(--other-title-color-dark);
   }
   
+  main p a,
+  .dark-mode main p a {
+    color: #821111;
+    font-weight: bold;
+  }
+  
 
   .dark-mode .settings__code2,
   .dark-mode .work__code2 {
