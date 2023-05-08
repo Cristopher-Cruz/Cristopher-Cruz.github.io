@@ -31,9 +31,12 @@ li {
 
 :root {
     --background-color-dark: #000000;
+    /* --background-color-dark: #292c35; */
+    /* --background-color-dark: #202122; */
+    /* --background-color-dark: #202124; */
     --title-page-color-dark: #f0f0f0;
     --other-title-color-dark: #c4c4c4;
-    --simple-content-color: #858585;
+    --simple-content-color: #515151;
 
     --font-size-small: 1.8rem;
     --font-size-normal: 2.2rem;
