@@ -20,7 +20,8 @@
 </head>
 
 <body>
-  <div id="mask"></div>
+  <div id="loader"></div>
+
 
 <!-- ************************** Nav Bar ************************** -->
 <div class="row nav-2">
@@ -237,6 +238,13 @@
     <script src="js/jquery-1.11.2.min.js"></script>
     <script src="../js/skills.js"></script>
     <script src="../js/global.js"></script>
+    <script>
+      window.addEventListener("load", function() {
+        const loader = document.getElementById("loader");
+        loader.style.display = "none";
+      });
+      </script>
+      
   
 
 

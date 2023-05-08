@@ -18,6 +18,8 @@
 </head>
 
 <body>
+  <div id="loader"></div>
+
 <!-- ************************** Header ************************** -->
   <header class="header" role="banner" id="top">
     
@@ -63,7 +65,13 @@
 
     </div>
   </header>
-
+  <script>
+    window.addEventListener("load", function() {
+      const loader = document.getElementById("loader");
+      loader.style.display = "none";
+    });
+    </script>
+    
 
 </body>
 

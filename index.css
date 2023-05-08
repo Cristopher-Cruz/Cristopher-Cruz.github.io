@@ -138,8 +138,6 @@ body {
     right: 0;
     bottom: 0;
     background-color: #ccc;
-    /* -webkit-transition: 0.4s; */
-    /* transition: 0.4s; */
   }
   
   .slider:before {
@@ -151,7 +149,6 @@ body {
     left: -15px;
     bottom: 4px;
     margin: auto;
-    /* box-shadow: 0 0px 15px #2020203d; */
     background: url('../images/sun.png');
     
     background-repeat: no-repeat;
@@ -1767,3 +1764,35 @@ a:is(:link, :active, :visited).active {
 
   }
 
+
+/* --------------------------------------- */
+/* ----- Loader ----- */
+/* --------------------------------------- */
+  #loader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    z-index: 9999;
+  }
+  
+  #loader:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    margin: -30px 0 0 -30px;
+    border-radius: 50%;
+    border: 6px solid #3498db;
+    border-top-color: #fff;
+    animation: spin 1.5s ease-in-out infinite;
+  }
+  
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  

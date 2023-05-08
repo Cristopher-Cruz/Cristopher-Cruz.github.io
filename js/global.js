@@ -2,11 +2,10 @@
 
 const activePage = window.location.pathname;
 const navLinks = document.querySelectorAll('nav a').forEach(link => {
-  if(link.href.includes(`${activePage}`)){
+  if (link.href.includes(`${activePage}`)) {
     link.classList.add('active');
   }
 })
-
 
 // ----------------> Light/Dark mode
 
@@ -15,27 +14,29 @@ const checkbox = document.getElementById('slider');
 const body = document.body;
 
 // Check the saved theme preference, if any
-const theme = localStorage.getItem('theme');
+const theme = localStorage.getItem('theme') || 'dark-mode';
 if (theme) {
   body.classList.add(theme);
-  if (theme === 'dark-mode') {
-    checkbox.checked = true;
-  }
+  checkbox.checked = theme === 'dark-mode';
 }
 
-// Toggle the theme and save the preference
-function toggleTheme() {
-  if (checkbox.checked) {
-    body.classList.add('dark-mode');
-    localStorage.setItem('theme', 'dark-mode');
-  } else {
-    body.classList.remove('dark-mode');
-    localStorage.setItem('theme', 'light-mode');
-  }
+// Set the theme based on the checkbox state and save the preference
+function setTheme() {
+  body.classList.toggle('dark-mode', checkbox.checked);
+  body.classList.toggle('light-mode', !checkbox.checked);
+  localStorage.setItem('theme', checkbox.checked ? 'dark-mode' : 'light-mode');
 }
+
+// Add an event listener to the checkbox to set the theme on change
+checkbox.addEventListener('change', setTheme);
+
+// Set the theme on page load
+setTheme();
+
+
+
+
 // ----------------> slideshow  
-
-
 (function() {
 
   init(); //on page load - show first slide, hidethe rest
