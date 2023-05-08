@@ -145,16 +145,15 @@ body {
   .slider:before {
     position: absolute;
     content: "";
-    height: 40px;
-    width: 40px;
+    height: 72px;
+    width: 60px;
     top: 0;
-    left: 0px;
+    left: -15px;
     bottom: 4px;
     margin: auto;
-    /* -webkit-transition: 0.4s; */
-    /* transition: 0.4s; */
-    box-shadow: 0 0px 15px #2020203d;
-    background: rgb(0, 0, 0) url('../images/sunny.png');
+    /* box-shadow: 0 0px 15px #2020203d; */
+    background: url('../images/sun.png');
+    
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -171,7 +170,12 @@ body {
     -webkit-transform: translateX(24px);
     -ms-transform: translateX(24px);
     transform: translateX(24px);
-    background: rgb(42, 42, 42)  url('../images/night.png');
+    top: 0;
+    left: 0px;
+    bottom: 4px;
+    height: 52px;
+    width: 52px;
+    background: url('../images/moon32.png');
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -181,7 +185,9 @@ body {
   }
   
   .slider.round:before {
-    border-radius: 50%;
+      border: none; /* removes the border */
+      border-radius: 50%;
+
   }
   
 
