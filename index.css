@@ -151,7 +151,7 @@ body {
     /* -webkit-transition: 0.4s; */
     /* transition: 0.4s; */
     box-shadow: 0 0px 15px #2020203d;
-    background: rgb(80, 80, 80) url('../images/sunny.png');
+    background: rgb(0, 0, 0) url('../images/sunny.png');
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -168,7 +168,7 @@ body {
     -webkit-transform: translateX(24px);
     -ms-transform: translateX(24px);
     transform: translateX(24px);
-    background: rgb(80, 80, 80)  url('../images/night.png');
+    background: rgb(42, 42, 42)  url('../images/night.png');
     background-repeat: no-repeat;
     background-position: center;
   }
