@@ -22,34 +22,41 @@
 <body>
   <div id="loader"></div>
 
-
-<!-- ************************** Nav Bar ************************** -->
-<div class="row nav-2">
-  <nav class="nav" role="navigation">
-    <ul class="nav__items">
-      <li class="nav__item"><a href="../index.html" class="nav__link2">Home</a></li>
-      <li class="nav__item"><a href="../pages/projects.html" class="nav__link2">Projects</a></li>
-      <li class="nav__item"><a href="../pages/skills.html" class="nav__link2">Skills</a></li>
-      <li class="nav__item"><a href="../pages/about.html" class="nav__link2">About</a></li>
-      <li class="nav__item"><a href="../pages/contact.html" class="nav__link2">Contact</a></li>
-      <li>
-        <label id="checkbox" class="checkbox">
-          <input type="checkbox" onchange="toggleTheme()" id="slider">
-          <span class="slider round"></span>
-        </label>
-      </li>
-    </ul>
-  </nav>
-</div>
-
-
 <!-- ************************** Main ************************** -->
-
-
 <main role="main">
+  <div class="container">
+  <ul id="sideNav" style="opacity: 1;" class="visible">
+    <!-- <li class="active" data-scroll-to-top="-20" style="opacity: 1; transform: translate(0px, 0px);"> </li> -->
+    <li style="opacity: 1;" id="sidebutton0"> </li>
+    <li style="opacity: 1;" id="sidebutton1"> </li>
+    <li style="opacity: 1;" id="sidebutton2"> </li>
+    <li style="opacity: 1;" id="sidebutton3"> </li>
+  </ul>
+
   <!-- ****** Work Section ****** -->
-    <section class="work" id="work">
-      <div class="row">
+    <div class="work" id="work">
+      <section class="work"> 
+
+      <div class="row-2">
+
+        <!-- ************************** Nav Bar ************************** -->
+        <div class="nav-2">
+          <nav class="nav" role="navigation">
+            <ul class="nav__items">
+              <li class="nav__item"><a href="../index.html" class="nav__link2">Home</a></li>
+              <li class="nav__item"><a href="../pages/projects.html" class="nav__link2">Projects</a></li>
+              <li class="nav__item"><a href="../pages/skills.html" class="nav__link2">Skills</a></li>
+              <li class="nav__item"><a href="../pages/about.html" class="nav__link2">About</a></li>
+              <li class="nav__item"><a href="../pages/contact.html" class="nav__link2">Contact</a></li>
+              <li>
+                <label id="checkbox" class="checkbox">
+                  <input type="checkbox" onchange="toggleTheme()" id="slider">
+                  <span class="slider round"></span>
+                </label>
+              </li>
+            </ul>
+          </nav>
+        </div>
 
         <!-- **************************************************** Skills **************************************************** -->
         <h2>Skills</h2>
@@ -89,6 +96,7 @@
           </div>
         </div>
       </div>
+    </section>
 
       <!-- **************************************************** CourseWork **************************************************** -->
       <section class="work">
@@ -190,19 +198,12 @@
         <p>Codepath iOS bootcamp</p>
       </div>
       <img src="../images/Codepathcert.png" />
-    </section>
+    </section>    
 
-
-
-
-
-    <!-- ************************************************************ -->
-
-    
-    <footer role="contentinfo" class="footer">
-      <div class="row">
+    <section id="footer" role="contentinfo" class="footer">
+      <div class="row2">
         <p>
-          Built & designed by Cristopher Cruz.
+          Built &amp; designed by Cristopher Cruz.
         </p>
         <ul class="footer__social-links">
           <li class="footer__social-link-item">
@@ -217,7 +218,17 @@
           </li>
         </ul>
       </div>
-    </footer>
+    </section>
+    
+  </section>
+</main>
+
+
+
+
+    <!-- ************************************************************ -->
+
+  
 
   
     <a href="#work" class="scroll-down" title="Scroll down">
@@ -236,8 +247,8 @@
     </a>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="js/jquery-1.11.2.min.js"></script>
-    <script src="../js/skills.js"></script>
     <script src="../js/global.js"></script>
+    <script src="../js/skills.js"></script>
     <script>
       window.addEventListener("load", function() {
         const loader = document.getElementById("loader");

@@ -221,3 +221,14 @@ body {
   text-transform: uppercase;
   padding: 15px 0; cursor: pointer; font-size: 15px;
 }
+
+/* .dark-mode li {
+  color: white;
+}
+.light-mode li {
+  color: white;
+} */
+
+.nav__link2{
+  color: white;
+}

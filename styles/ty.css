@@ -1,0 +1,509 @@
+/* --------------------------------------- */
+/* ----- Basic Setup ----- */
+/* --------------------------------------- */
+
+@font-face {
+    font-family: 'Hk Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/HKGrotesk-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/Jost-Regular.ttf') format('woff');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+li {
+    color: black;
+}
+.dark-mode li {
+    color: white;
+}
+
+:root {
+    --background-color-dark: #000000;
+    /* --background-color-dark: #292c35; */
+    /* --background-color-dark: #202122; */
+    /* --background-color-dark: #202124; */
+    --title-page-color-dark: #f0f0f0;
+    --other-title-color-dark: #c4c4c4;
+    --simple-content-color: #515151;
+
+    --font-size-small: 1.8rem;
+    --font-size-normal: 2.2rem;
+    --font-size-medium: 2.8rem;
+    --font-size-medium-1: 3.2rem;
+    --font-size-medium-2: 3.8rem;
+    --font-size-large: 5.5rem;
+    --font-size-huge: 7.5rem;
+    --font-stack: 'Hk Grotesk', sans-serif;
+
+    --line-height-normal: 1.7;
+    --line-height-small: 1.2;
+
+    --black: #000;
+    --pink: #ff3258;
+    --white: #f0e9f2;
+    --white-1: #e5e5e6da;
+
+
+    --container-max-width: 1180px;
+    --container-max-width2: 1320px;
+    --container-normal-width: 800px;
+    --container-medium-width: 700px; 
+    --container-small-width: 500px;
+
+    --gutter-huge: 10rem;
+    --gutter-medium: 4.5rem;
+    --gutter-normal: 3rem;
+    --gutter-small-1: 2.5rem;
+    --gutter-small: 1rem;
+
+    --border-light: 1px solid rgb(36, 35, 35);
+}
+
+html {
+    font-size: 62.5%; /* (16/10)*100 = 62.5% => 1rem = 10px */
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-size: var(--font-size-small);
+    font-family: var(--font-stack);
+    font-weight: 400;
+    line-height: var(--line-height-normal);
+    overflow-x: hidden;
+    
+    /* background: rgb(14, 14, 14); */
+    /* color: var(--white-1); */
+}
+
+.container {
+    scroll-snap-type: y mandatory;
+}
+
+.area {
+    scroll-snap-align: start;
+}
+
+.container {
+  overflow: auto;
+  height: 100vh;
+}
+.area {
+  height: 100vh;
+	font-size: 100px;
+	/* color: #fff; */
+}
+
+.area:nth-child(even) {
+  background-color: pink;
+}
+.area:nth-child(odd) {
+  background-color: green;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  
+    margin-top: 100px;
+}
+
+.title {
+  text-align: center;
+  position: sticky;
+  top: 0;
+}
+
+
+
+
+.dark-mode {
+    background-color: var(--background-color-dark);
+  }
+  
+  
+  .dark-mode main a {
+    color: var(--other-title-color-dark);
+  }
+  
+  main p a,
+  .dark-mode main p a {
+    color: #821111;
+    font-weight: bold;
+  }
+  
+  h1,
+  h2,
+  h3, 
+  h4,
+  h5{
+      font-family: 'Jost', sans-serif;
+      font-weight: 400;
+      line-height: var(--line-height-small);
+      color: black;
+  }
+  h6 {
+
+    display: block;
+    font-size: 1.3em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    
+    } 
+
+    .work__links {
+        display: flex;
+        align-items: center;
+    }
+    
+    .work__text {
+        flex: 0 0 50%;}
+    .work__text p {
+        font-size : var(--font-size-normal);}
+    
+    
+    .list-2 li {
+        list-style: none;
+        position: relative;
+        padding: 3px 0 2px 25px;
+      }
+      
+      .list-2 li::before {
+        content: '*';
+        position: absolute;
+        top: 6px;
+        left: 0;
+      }
+
+    .work__list {
+        list-style-position: inside;
+        margin-bottom: var(--gutter-normal);
+    }
+    
+    .work__list3 {
+        list-style-position: inside;
+        margin-bottom: var(--gutter-normal);
+        max-width: 50%
+    }
+    .work__list3 li {
+        display: inline;
+    
+    }
+    
+    .work__list2 {
+        list-style-position: inside;
+        text-indent: -1.3em;
+        padding-left: 1em;
+        margin-bottom: var(--gutter-normal);
+    }
+    
+.work__code {
+    display: block;
+    height: 4rem;
+    margin-left: var(--gutter-normal);
+}
+
+.work__code2 {
+    display: block;
+    height: 4rem;
+    margin-left: var(--gutter-normal);
+  filter: brightness(0%);
+}
+
+.work__code:hover,
+.work__code2:hover {
+    
+    transform: scale(1.2);
+    filter: grayscale(100%) brightness(30%) sepia(40%) hue-rotate(-55deg) saturate(490%) contrast(3.0);
+    transition: none;
+}
+
+.work__image-box {
+    margin-bottom: var(--gutter-normal);
+}
+
+.work__image-box2 {
+    margin-bottom: var(--gutter-normal);
+}
+
+
+
+@media(min-width: 901px) {
+    .work__image-box {
+        flex: 1;
+        margin: 0 0 0 0rem;
+    }
+}
+
+@media(min-width: 901px) {
+    .work__image-box2 {
+        flex: 1;
+        margin: 0 0 0 3rem;
+    }
+}
+
+@media(max-width: 900px) {
+    .work__code {
+        height: 4rem;
+    }
+}
+
+
+@media(min-width: 901px) {
+    .work__image-box {
+        flex: 1;
+        margin: 0 0 0 0rem;
+    }
+}
+
+@media(min-width: 901px) {
+    .work__image-box2 {
+        flex: 1;
+        margin: 0 0 0 3rem;
+    }
+}
+
+@media(max-width: 900px) {
+    .work__code {
+        height: 4rem;
+    }
+}
+
+
+  .dark-mode .settings__code2,
+  .dark-mode .work__code2 {
+    filter: invert(100%);
+  }
+  
+
+  .dark-mode header h1 {
+    color: var(--title-page-color-dark);
+  }
+  
+  .dark-mode p {
+    color: var(--title-page-color-dark);
+  
+  }
+  
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4,
+.dark-mode h5,
+.dark-mode h7 {
+    color: white;
+}
+
+  
+  .dark-mode nav a {
+    color: white;
+  }
+  
+  .dark-mode .other-title {
+    color: var(--other-title-color-dark);
+  }
+  
+  
+  .dark-mode .simple-content {
+    color: var(--simple-content-color);
+  }
+
+  .dark-mode h2::after
+  {
+      background: #821111;
+  }
+  
+  
+  .dark-mode .work__text h4,
+  .dark-mode .work__text li,
+  .dark-mode .coursework__text h4,
+  .dark-mode .coursework__text li,
+  .dark-mode .row-mid h5,
+  .dark-mode .link__text,
+  .dark-mode .back-to-0,
+  .dark-mode .nav__link2
+  {
+      color: white;
+  }
+  
+  .dark-mode .header__text p,
+  .dark-mode .See-my-work .btn--contact
+  {
+      color: white;
+  }
+  
+  .dark-mode .all-projects .btn--projects,
+  .dark-mode .all-projects p,
+  .dark-mode .all-projects h4
+  
+  {
+      color: white;
+  }
+  
+
+
+
+/* --------------------------------------- */
+/* ----- About ----- */
+/* --------------------------------------- */
+
+
+
+
+
+
+.img-container {
+    max-width: auto;
+    position: relative;
+    margin: auto;
+    margin-left: -6rem;
+}
+
+.myimg {
+display:none;
+text-align : center;
+}
+
+.myimg img {
+max-width: 100%;
+width: 90%;
+height: 700px;
+object-fit: contain;
+}
+
+.slideshow-container {
+max-width: auto;
+position: relative;
+margin: auto;
+margin-left: 0 rem;
+}
+
+/* .slideshow-container2 {
+max-width: auto;
+position: relative;
+margin: auto;
+margin-left: -6rem;
+} */
+
+/* Next & previous buttons */
+.prev, .next {
+cursor: pointer;
+position: absolute;
+top: 50%;
+width: auto;
+margin-top: -22px;
+
+margin-left: 0rem;
+
+padding: 16px;
+color: black;
+font-weight: bold;
+font-size: 18px;
+transition: 0.6s ease;
+border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+right: 0;
+border-radius: 3px 0 0 3px;
+}
+.prev{
+/* margin-left: -8rem; */
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+background-color: rgba(0,0,0,0.8);
+}
+
+
+/* Caption text */
+.text {
+color: #f2f2f2;
+font-size: 15px;
+padding: 8px 12px;
+position: absolute;
+bottom:20px;
+width: 100%;
+text-align: center;
+}
+.mySlides {
+display:none;
+text-align : center;
+
+}
+
+.mySlides img {
+max-width: 100%;
+width: 90%;
+height: 700px;
+object-fit: contain;
+}
+
+.active-slide {
+display:block;
+}
+/* Number text (1/3 etc) */
+.numbertext {
+color: #f2f2f2;
+font-size: 12px;
+padding: 8px 12px;
+position: absolute;
+top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+cursor:pointer;
+height: 13px;
+width: 13px;
+margin: 0 2px;
+margin-left: 0rem;
+background-color: #bbb;
+border-radius: 50%;
+display: inline-block;
+transition: background-color 0.6s ease;
+}
+
+.dot:hover {
+background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+-webkit-animation-name: fade;
+-webkit-animation-duration: 1.5s;
+animation-name: fade;
+animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+from {opacity: .4}
+to {opacity: 1}
+}
+
+@keyframes fade {
+from {opacity: .4}
+to {opacity: 1}
+}

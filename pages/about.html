@@ -14,49 +14,53 @@
   <meta name="description" content="Portfolio">
   <meta name="keywords" content="Cristopher Cruz, Software Engineer, Programming, Portfolio" />
   <script src="https://unpkg.com/feather-icons"></script>
-  <link rel="stylesheet" href="../index.css" />
-  <!-- <link rel="stylesheet" href="../styles/about.css" /> -->
-  <!-- <link rel="stylesheet" href="../styles/global.css" /> -->
 
+  <link rel="stylesheet" href="../index.css" />
+  <link rel="stylesheet" href="../styles/projects.css" />
 </head>
 
 <body>
   <div id="loader"></div>
 
-
-
-<!-- ************************** Nav Bar ************************** -->
-  <div class="row nav-2">
-    <nav class="nav" role="navigation">
-      <ul class="nav__items">
-        <li class="nav__item"><a href="../index.html" class="nav__link2">Home</a></li>
-        <li class="nav__item"><a href="../pages/projects.html" class="nav__link2">Projects</a></li>
-        <li class="nav__item"><a href="../pages/skills.html" class="nav__link2">Skills</a></li>
-        <li class="nav__item"><a href="../pages/about.html" class="nav__link2">About</a></li>
-        <li class="nav__item"><a href="../pages/contact.html" class="nav__link2">Contact</a></li>
-        <li>
-          <label id="checkbox" class="checkbox">
-            <input type="checkbox" onchange="toggleTheme()" id="slider">
-            <span class="slider round"></span>
-          </label>
-        </li>
-      </ul>
-    </nav>
-  </div>
-
-
-
-
 <!-- ************************** Main ************************** -->
 <main role="main">
+  <div class="container">
+    <ul id="sideNav" style="opacity: 1;" class="visible">
+      <!-- <li class="active" data-scroll-to-top="-20" style="opacity: 1; transform: translate(0px, 0px);"> </li> -->
+      <li style="opacity: 1;" id="sidebutton0"> </li>
+      <li style="opacity: 1;" id="sidebutton1"> </li>
+      <li style="opacity: 1;" id="sidebutton2"> </li>
+      <li style="opacity: 1;" id="sidebutton3"> </li>
+      <li style="opacity: 1;" id="sidebutton4"> </li>
+      <li style="opacity: 1;" id="sidebutton5"> </li>
+  </ul>
 
-    <!-- ****** About ****** -->
-
-    <section class="about" id="about">
-      <div class="row">
+    <!-- ****** Born in ****** -->
+    <section class="area" id="work">
+      <div class="row-2">
+        
+      <!-- ************************** Nav Bar ************************** -->
+      <div class="nav-2">
+        <nav class="nav" role="navigation">
+          <ul class="nav__items">
+            <li class="nav__item"><a href="../index.html" class="nav__link2">Home</a></li>
+            <li class="nav__item"><a href="../pages/projects.html" class="nav__link2">Projects</a></li>
+            <li class="nav__item"><a href="../pages/skills.html" class="nav__link2">Skills</a></li>
+            <li class="nav__item"><a href="../pages/about.html" class="nav__link2">About</a></li>
+            <li class="nav__item"><a href="../pages/contact.html" class="nav__link2">Contact</a></li>
+            <li>
+              <label id="checkbox" class="checkbox">
+                <input type="checkbox" onchange="toggleTheme()" id="slider">
+                <span class="slider round"></span>
+              </label>
+            </li>
+          </ul>
+        </nav>
+      </div>
         <h2>I was born in...</h2>
         <div class="about__content">
           <div class="about__text">
+            <!-- <h5>Honduras &#127469;&#127475;</h5> -->
             <h5>Honduras &#127469;&#127475;</h5>
             <p><b>Date : </b>03/17/1999..  *St. Patrick's Day*</p>
             <p><b>Pictures</b> <br>
@@ -112,171 +116,161 @@
             </div>
             <br>
           </div>
+        </div>
+      </div>
+
+    </section>
+    <!-- ****** Moved to ****** -->
+    <section class="area" class="work" id="work">
+      <div class="row">
+        <h2>I moved to...</h2>
+        <div class="about__content">
+          <div class="about__text">
+            <h7><b>Miami, Fl</b></h7>
+            <p><b>Date : </b>2007-present</p>
+            <p>
+              <b>Distance: :</b><br>
+              <b>By Air:</b> 926 miles <br>
+              <b>By land: </b>3091 miles<br><br>
+              <b>Flight Time: :</b><br><b>Approx:</b> 2hr 25mins <br>
+            </p>
+          </div>
+          <div class="about__photo-container">
+            <div class="slideshow-container">
+       
+              <div class="mySlides fade">
+                <img src="../images/mia1.png">
+              </div>
+            <div style="text-align:center">
+                <span class="dot"></span>
+              </div>
+            </div>
+            <br>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ****** Grad from ****** -->
+    <section class="area" class="work" id="work">
+      <div class="row">
+        <h2>I graduated from...</h2>
+        <div class="about__content">
+          <div class="about__text">
+            <h7>Florida State University</h7>
+            <p>Major : Computer Science (B.S)</p>
+            <p>Minor : Mathematics</p>
+            <p>Date : 12/16/2022</p>
+            <h3>Involvement : </h3> 
+            <p>
+              <b>Central American United Student Association: </b> 1st president/founder<br>
+              <b>FAMU-FSU SHPE: </b>Comm. service chair <br>
+              <b>FSU IGEM: </b>Student research <br>
+              <b>CARE Leadership Council</b> <br>
+              <!-- <b>FSU PBM</b><br> -->
+              <b>Kappa Alpha Psi Fraternity Inc.</b> - The Award Winning Theta Eta chapter : Comm. service chair/Stepmaster
+            </p>
+  
+  
+  
+          </div>
+  
+          <div class="about__photo-container">
+            <div class="slideshow-container">
+       
+              <div class="mySlides fade">
+                <img src="../images/fsu1.png">
+              </div>
+            
+              <div style="text-align:center">
+                <span class="dot"></span>
+              </div>
+            </div>
+            <br>
+          </div>
+          </div>
+      </div>
+    </section>
+    <!-- ****** Interest/Spare time ****** -->
+    <section class="about" id="about">
+        <div class="row">
+          <h2>On my spare time...</h2>
+          <div class="about__content">
+            <div class="about__text">
+              <h5>Interest</h5>
+              <p>
+                <li>Artificial Intelligence</li>
+                <li>ML: Deep Learning </li>
+                <li>Computer Vision</li>
+                <li>Mobile development</li>
+                <li>ITC: TCP/IP, SDN, GIS</li>
+            </p>
+              <h5>Hobbies</h5>
+              <p>
+                <li>Travel</li>
+                <li>Running</li>
+                <li>Coding</li>
+            </p>
+              
+              <h5>Personal Interest</h5>
+              <p>
+                <li>Agriculture</li>
+                <li>Cognitive Neuroscience</li>
+                <li>Health/Nutrition/Biohacking</li>
+                <li>Ancient Civilizations</li>
+            </p>
+              
+            </div>
+            <div class="about__photo-container">
+              <div class="slideshow-container">
+                
+                <div class="mySlides fade">
+                  <img src="../images/trv1.jpeg">
+                </div>
+        
+                <div class="mySlides fade">
+                  <img src="../images/run1.jpg">
+                </div>
+        
+        
+                <div class="mySlides fade">
+                  <img src="../images/hob3.png"">
+                </div>
+              
+                <a class="prev">&#10094;</a>
+                <a class="next">&#10095;</a>
+              
+                <div style="text-align:center">
+                  <span class="dot"></span>
+                  <span class="dot" ></span>
+                  <span class="dot" ></span>
+                </div>
+              </div>
+              <br>
+            </div>
+            </div>
+        </div>
+    </section>
+    <!-- ****** quotes ****** -->
+    <section class="area2">
+      <div class="row">
+        <h2>Favorite quotes</h2>
+        <div class="about__content">
+          <div class="about__text2">
+            <!-- <p>"Take up one idea. Make that one idea your life -- think of it, dream of it, live on that idea. Let the brain, muscles, nerves, every part of your body be full of that idea, and just leave every other idea alone. This is the way to success."<br><b> - Swami Vivekananda</b></p> -->
+            <p>“Do not go where the path may lead, go instead where there is no path and leave a trail.” <br><b>- Ralph Waldo Emerson</b></p>
+            <!-- <p>“Remember that wherever your heart is, there you will find your treasure.”  <br><b> - Paulo Coelho, The Alchemist</b></p> -->
+            <p>"To surrender dreams — this may be madness. Too much sanity may be madness — and maddest of all: to see life as it is, and not as it should be!” <br><b> - Miguel de Cervantes, Don Quijote</b></p>
+            <p>“I do not think there is any thrill that can go through the human heart like that felt by the inventor as he sees some creation of the brain unfolding to success . . . Such emotions make a man forget food, sleep, friends, love, everything.” <br><b>- Nikola Tesla</b></p>
+            <p>“All that nature asks of man is that he use his compound temperament, disposition, and integration to advance the common good of himself and others of his kind”  <br><b> - Manly P. Hall</b></p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="about" id="about">
-      
-    <div class="row">
-      <h2>I moved to...</h2>
-      <div class="about__content">
-        <div class="about__text">
-          <h7><b>Miami, Fl</b></h7>
-          <p><b>Date : </b>2007-present</p>
-          <p>
-            <b>Distance: :</b><br>
-            <b>By Air:</b> 926 miles <br>
-            <b>By land: </b>3091 miles<br><br>
-
-            <b>Flight Time: :</b><br><b>Approx:</b> 2hr 25mins <br>
-
-
-          </p>
-        </div>
-        <div class="about__photo-container">
-          <div class="slideshow-container">
-     
-            <div class="mySlides fade">
-              <img src="../images/mia1.png">
-            </div>
-            <div style="text-align:center">
-              <span class="dot"></span>
-            </div>
-          </div>
-          <br>
-        </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-    <section class="about" id="about">
-    <div class="row">
-      <h2>I graduated from...</h2>
-      <div class="about__content">
-        <div class="about__text">
-          <h7>Florida State University</h7>
-          <p>Major : Computer Science (B.S)</p>
-          <p>Minor : Mathematics</p>
-          <p>Date : 12/16/2022</p>
-          <h3>Involvement : </h3> 
-          <p>
-            <b>Central American United Student Association: </b> 1st president/founder<br>
-            <b>FAMU-FSU SHPE: </b>Comm. service chair <br>
-            <b>FSU IGEM: </b>Student research <br>
-            <b>CARE Leadership Council</b> <br>
-            <!-- <b>FSU PBM</b><br> -->
-            <b>Kappa Alpha Psi Fraternity Inc.</b> - The Award Winning Theta Eta chapter : Comm. service chair/Stepmaster
-          </p>
-
-
-
-        </div>
-
-        <div class="about__photo-container">
-          <div class="slideshow-container">
-     
-            <div class="mySlides fade">
-              <img src="../images/fsu1.png">
-            </div>
-          
-            <div style="text-align:center">
-              <span class="dot"></span>
-            </div>
-          </div>
-          <br>
-        </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-    
-  <section class="about" id="about">
-    <div class="row">
-      <h2>On my spare time...</h2>
-      <div class="about__content">
-        <div class="about__text">
-          <h5>Interest</h5>
-          <p>
-            <li>Artificial Intelligence</li>
-            <li>ML: Deep Learning </li>
-            <li>Computer Vision</li>
-            <li>Mobile development</li>
-        </p>
-          <h5>Hobbies</h5>
-          <p>
-            <li>Travel</li>
-            <li>Running</li>
-            <li>Coding</li>
-        </p>
-          
-          <h5>Personal Interest</h5>
-          <p>
-            <li>Agriculture</li>
-            <li>Cognitive Neuroscience</li>
-            <li>Health/Nutrition/Biohacking</li>
-            <li>Ancient Civilizations</li>
-        </p>
-           
-        </div>
-        <div class="about__photo-container">
-          <div class="slideshow-container">
-            
-            <div class="mySlides fade">
-              <img src="../images/trv1.jpeg">
-            </div>
-     
-            <div class="mySlides fade">
-              <img src="../images/run1.jpg">
-            </div>
-    
-    
-            <div class="mySlides fade">
-              <img src="../images/hob3.png"">
-            </div>
-          
-            <a class="prev">&#10094;</a>
-            <a class="next">&#10095;</a>
-          
-            <div style="text-align:center">
-              <span class="dot"></span>
-              <span class="dot" ></span>
-              <span class="dot" ></span>
-            </div>
-          </div>
-          <br>
-        </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="about" id="about">
-    <div class="row">
-      <h2>Favorite quotes</h2>
-      <div class="about__content">
-        <div class="about__text2">
-          <!-- <p>"Take up one idea. Make that one idea your life -- think of it, dream of it, live on that idea. Let the brain, muscles, nerves, every part of your body be full of that idea, and just leave every other idea alone. This is the way to success."<br><b> - Swami Vivekananda</b></p> -->
-          <p>“Do not go where the path may lead, go instead where there is no path and leave a trail.” <br><b>- Ralph Waldo Emerson</b></p>
-          <!-- <p>“Remember that wherever your heart is, there you will find your treasure.”  <br><b> - Paulo Coelho, The Alchemist</b></p> -->
-          <p>"To surrender dreams — this may be madness. Too much sanity may be madness — and maddest of all: to see life as it is, and not as it should be!” <br><b> - Miguel de Cervantes, Don Quijote</b></p>
-          <p>“I do not think there is any thrill that can go through the human heart like that felt by the inventor as he sees some creation of the brain unfolding to success . . . Such emotions make a man forget food, sleep, friends, love, everything.” <br><b>- Nikola Tesla</b></p>
-        </div>
-
-        </div>
-      </div>
-    </div>
-  </section>
-  </main>
-
-    <!-- ************************** Footer ************************** -->
-    <footer role="contentinfo" class="footer">
-      <div class="row">
+    <section id="footer" role="contentinfo" class="footer">
+      <div class="row2">
         <p>
-          Built & designed by Cristopher Cruz.
+          Built &amp; designed by Cristopher Cruz.
         </p>
         <ul class="footer__social-links">
           <li class="footer__social-link-item">
@@ -291,28 +285,22 @@
           </li>
         </ul>
       </div>
-    </footer>
+    </section>
+</main>
+    <!-- ************************** Footer ************************** -->
 
-  <a href="#work" class="scroll-down" title="Scroll down">
-    <img src="../images/arrow-up.svg" alt="Scroll down" class="scroll-down_image"/>
-  </a>
   
-  <a href="#" class="scroll-up" title="Scroll up">
-    <img src="../images/arrow-up.svg" alt="scroll up" class="scroll-up__image"/>
+  <a href="#top" class="btn back-to-0" title="Back to top">Back to top
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-up-circle" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+    </svg>
   </a>
 
-
-    <a href="#top" class="btn back-to-0" title="Back to top">Back to top
-      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-up-circle" viewBox="0 0 16 16">
-        <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
-      </svg>
-    </a>
   
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="js/jquery-1.11.2.min.js"></script>
-  <script src="../js/about.js"></script>
-
+  <script src="../js/index.js"></script>
   <script src="../js/global.js"></script>
   <script>
     window.addEventListener("load", function() {
@@ -321,6 +309,7 @@
     });
     </script>
     
-</body>
   
-</html>
+  </body>
+  
+  </html>

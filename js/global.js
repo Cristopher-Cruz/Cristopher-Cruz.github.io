@@ -1,3 +1,61 @@
+$(document).ready(function() {
+  var currentSection = 0;
+  var sectionPositions = [];
+  
+  // get positions of each section
+  $('section').each(function() {
+    sectionPositions.push(this.offsetTop);
+    console.log('Section position:', this.offsetTop);
+  });
+
+  console.log('Current Section:', currentSection);
+  
+  // Intersection Observer function : get current section dynamically
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        var sectionIndex = $('section').index(entry.target);
+        currentSection = sectionIndex;
+        console.log('Current Section:', currentSection);
+
+        // Remove active class from all sideNav buttons
+        $('li[id^="sidebutton"]').removeClass('active');
+        
+        // Add active class to the corresponding sideNav button
+        $('#sidebutton' + currentSection).addClass('active');
+
+      }
+    });
+  }, { threshold: 0.5 });
+  
+  $('section').each(function() {
+    observer.observe(this);
+  });
+
+  // Add onClick function to sideNav buttons
+  $('li[id^="sidebutton"]').on('click', function(event) {
+    event.preventDefault(); // Prevent the default behavior of the anchor element
+    
+    var buttonIndex = parseInt($(this).attr('id').replace('sidebutton', ''));
+    currentSection = buttonIndex;
+    console.log('Current Section:', currentSection);
+    
+    // Remove active class from all sideNav buttons
+    $('li[id^="sidebutton"]').removeClass('active');
+    
+    // Add active class to the clicked sideNav button
+    $(this).addClass('active');
+    
+    // Scroll to the associated section
+    var section = $('section').eq(currentSection)[0];
+    section.scrollIntoView({ behavior: 'smooth' });
+
+  });
+
+    
+
+});
+
 // ----------------> Highlight NavLink
 
 const activePage = window.location.pathname;
@@ -7,33 +65,8 @@ const navLinks = document.querySelectorAll('nav a').forEach(link => {
   }
 })
 
-// ----------------> Light/Dark mode
 
-// Get the checkbox element and the HTML body
-const checkbox = document.getElementById('slider');
 const body = document.body;
-
-// Check the saved theme preference, if any
-const theme = localStorage.getItem('theme') || 'dark-mode';
-if (theme) {
-  body.classList.add(theme);
-  checkbox.checked = theme === 'dark-mode';
-}
-
-// Set the theme based on the checkbox state and save the preference
-function setTheme() {
-  body.classList.toggle('dark-mode', checkbox.checked);
-  body.classList.toggle('light-mode', !checkbox.checked);
-  localStorage.setItem('theme', checkbox.checked ? 'dark-mode' : 'light-mode');
-}
-
-// Add an event listener to the checkbox to set the theme on change
-checkbox.addEventListener('change', setTheme);
-
-// Set the theme on page load
-setTheme();
-
-
 
 
 // ----------------> slideshow  
@@ -116,3 +149,33 @@ setTheme();
 
   }
 })();
+
+
+// ------------------------------------------------> Light/Dark mode
+
+// Get the checkbox element and the HTML body
+const checkbox = document.getElementById('slider');
+
+// Check the saved theme preference, if any
+const theme = localStorage.getItem('theme');
+if (theme) {
+  body.classList.add(theme);
+  checkbox.checked = theme === 'dark-mode';
+}
+
+// Set the theme based on the checkbox state and save the preference
+function setTheme() {
+  body.classList.toggle('dark-mode', checkbox.checked);
+  localStorage.setItem('theme', checkbox.checked ? 'dark-mode' : 'light-mode');
+}
+
+// Add an event listener to the checkbox to set the theme on change
+checkbox.addEventListener('change', setTheme);
+
+// Set the theme on page load
+setTheme();
+
+
+
+// ------------------------------------------------> SideNav Buttons
+
