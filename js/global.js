@@ -1,3 +1,5 @@
+
+
 $(document).ready(function() {
   var currentSection = 0;
   var sectionPositions = [];
@@ -52,9 +54,9 @@ $(document).ready(function() {
 
   });
 
-    
-
 });
+
+
 
 // ----------------> Highlight NavLink
 
@@ -67,6 +69,36 @@ const navLinks = document.querySelectorAll('nav a').forEach(link => {
 
 
 const body = document.body;
+
+
+// ------------------------------------------------> Light/Dark mode
+
+ // Get the checkbox element and the HTML body
+ const checkbox = document.getElementById('slider');
+
+// Set the theme based on the saved preference or default to dark mode
+const savedTheme = localStorage.getItem('theme');
+const theme = savedTheme ? savedTheme : 'dark-mode';
+body.classList.toggle('dark-mode', theme === 'dark-mode');
+body.classList.toggle('light-mode', theme === 'light-mode');
+checkbox.checked = theme === 'dark-mode';
+
+// Add an event listener to the checkbox to set the theme on change
+checkbox.addEventListener('change', setTheme);
+
+// Set the theme based on the checkbox state and save the preference
+function setTheme() {
+  const theme = checkbox.checked ? 'dark-mode' : 'light-mode';
+  body.classList.toggle('dark-mode', theme === 'dark-mode');
+  body.classList.toggle('light-mode', theme === 'light-mode');
+  localStorage.setItem('theme', theme);
+}
+
+ // Add an event listener to the checkbox to set the theme on change
+ checkbox.addEventListener('change', setTheme);
+
+ // Set the theme on page load
+ setTheme();
 
 
 // ----------------> slideshow  
@@ -151,29 +183,6 @@ const body = document.body;
 })();
 
 
-// ------------------------------------------------> Light/Dark mode
-
-// Get the checkbox element and the HTML body
-const checkbox = document.getElementById('slider');
-
-// Check the saved theme preference, if any
-const theme = localStorage.getItem('theme');
-if (theme) {
-  body.classList.add(theme);
-  checkbox.checked = theme === 'dark-mode';
-}
-
-// Set the theme based on the checkbox state and save the preference
-function setTheme() {
-  body.classList.toggle('dark-mode', checkbox.checked);
-  localStorage.setItem('theme', checkbox.checked ? 'dark-mode' : 'light-mode');
-}
-
-// Add an event listener to the checkbox to set the theme on change
-checkbox.addEventListener('change', setTheme);
-
-// Set the theme on page load
-setTheme();
 
 
 

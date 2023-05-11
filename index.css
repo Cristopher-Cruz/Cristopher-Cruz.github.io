@@ -1918,6 +1918,13 @@ a:is(:link, :active, :visited).active {
 }
 
 
+@media(max-width: 1550px) {
+    #sideNav {
+        left: 1.5rem;
+    }
+
+}
+
 @media(max-width: 1500px) {
     #sideNav {
         left: 1.5rem;
