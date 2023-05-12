@@ -242,9 +242,21 @@ section.area2 {
   .dark-mode main a {
     color: var(--other-title-color-dark);
   }
+
+  .dark-mode main li a {
+    /* color: var(--other-title-color-dark); */
+    color: #821111;
+
+  }
   
   main p a,
-  .dark-mode main p a {
+  .dark-mode main p a,
+  .dark-mode main li a {
+    color: #821111;
+    font-weight: bold;
+  }
+  
+main .work__list li a {
     color: #821111;
     font-weight: bold;
   }
