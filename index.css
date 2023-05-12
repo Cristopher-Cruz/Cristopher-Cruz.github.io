@@ -1043,7 +1043,7 @@ a:is(:link, :active, :visited).active {
 }
 
 .header__text p {
-    margin: 1.5rem 0 8.5rem;
+    margin: 1.5rem 1rem 8.5rem;
     max-width: var(--container-medium-width);
     font-family: 'Jost', sans-serif;
     font-size: var(--font-size-normal);
