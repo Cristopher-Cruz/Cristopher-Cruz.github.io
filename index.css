@@ -251,7 +251,7 @@ section.area2 {
   
   main p a,
   .dark-mode main p a,
-  .dark-mode main li a {
+  .dark-mode main .work__list li a {
     color: #821111;
     font-weight: bold;
   }
