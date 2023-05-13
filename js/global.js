@@ -54,6 +54,7 @@ $(document).ready(function() {
 
   });
 
+
 });
 
 
@@ -185,6 +186,4 @@ function setTheme() {
 
 
 
-
-// ------------------------------------------------> SideNav Buttons
 
