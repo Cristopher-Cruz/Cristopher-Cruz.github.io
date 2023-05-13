@@ -23,7 +23,7 @@ function magnifier() {
 
     $pointer.hover(function() {
 
-    if ($(this).hasClass("work__code")) {
+    if ($(this).hasClass("work__code") || $(this).hasClass("footer__social-image")) {
         return; // Exit the function, do nothing
         }
       $(this).css('cursor', 'none');
