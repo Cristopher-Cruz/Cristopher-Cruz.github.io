@@ -18,7 +18,7 @@ $(document).ready(function() {
       if (entry.isIntersecting) {
         var sectionIndex = $('section').index(entry.target);
         currentSection = sectionIndex;
-        console.log('Current Section:', currentSection);
+        console.log('Current Section intersectionObserver:', currentSection);
 
         // Remove active class from all sideNav buttons
         $('li[id^="sidebutton"]').removeClass('active');
