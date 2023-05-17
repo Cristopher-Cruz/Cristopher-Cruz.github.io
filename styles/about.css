@@ -1,37 +1,16 @@
-main {
-  display: flex;
-  flex-direction: row;
 
-  justify-content: space-evenly;
+
+a {
+  color: #821111;
+  font-weight: 400;
+  font-family: 'Jost', sans-serif;
+  transition: all .2s;
+  outline: 2px solid transparent;
 }
-
-main div:first-child {
-  display: flex;
-}
-
-main div:first-child img {
-  height: 10rem;
-  width: 10rem;
-
-  border-radius: 5rem;
-
-  margin: auto;
-}
-
-main div:last-child {
-  display: flex;
-  flex-direction: column;
-
-  justify-content: space-evenly;
-}
-
-.information {
-  display: flex;
-  flex-direction: column;
-}
-
-@media (max-width: 500px) {
-  main {
-    flex-direction: column;
-  }
+.dark-mode a {
+  color: #821111;
+  font-weight: 400;
+  font-family: 'Jost', sans-serif;
+  transition: all .2s;
+  outline: 2px solid transparent;
 }
