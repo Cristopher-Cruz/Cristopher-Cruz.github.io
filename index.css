@@ -1936,6 +1936,28 @@ a:is(:link, :active, :visited).active {
 
 }
 
+@media(max-width: 1080px) {
+    #sideNav {
+        display: none;
+    }
+    .nav-2{
+        /* left: 1.5rem; */
+    }
+    .nav__items {
+        justify-content:left;
+        display: display-flex;
+    }
+    .nav-2 {
+        font-size: 2rem;
+        padding-left: -2rem;
+        /* padding: var(--gutter-small-0) 0; */
+    }
+    .row-2{
+        padding: 2rem;
+    }
+
+}
+
 
 /* @media(max-width: 1240px) {
     #sideNav {
