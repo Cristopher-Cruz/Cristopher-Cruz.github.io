@@ -1929,6 +1929,13 @@ a:is(:link, :active, :visited).active {
 
 }
 
+@media(max-width: 1080px) {
+    #sideNav {
+        display: none;
+    }
+
+}
+
 
 /* @media(max-width: 1240px) {
     #sideNav {

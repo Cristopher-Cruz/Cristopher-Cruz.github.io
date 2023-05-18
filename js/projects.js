@@ -1,5 +1,5 @@
 /*Size is  set in pixels... supports being written as: '250px' */
-var magnifierSize = 300;
+var magnifierSize = 450;
 // var magnifierSize2 = 350;
 
 /* How many times magnification of image on page. */
