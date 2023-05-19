@@ -8,6 +8,19 @@ var magnification = 1.5;
 function magnifier() {
 
   this.magnifyImg = function(ptr, magnification, magnifierSize) {
+
+    // Check if the device is mobile
+    function isMobile() {
+      return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    }
+    if (isMobile()) {
+      var container = document.querySelector('.container');
+      container.style.scrollSnapType = 'none';
+      var sections = document.querySelectorAll('section');
+      for (var i = 0; i < sections.length; i++) {
+        sections[i].style.scrollSnapAlign = 'none';
+      }
+    }
     var $pointer;
     if (typeof ptr == "string") {
       $pointer = $(ptr);
@@ -22,6 +35,9 @@ function magnifier() {
     magnification = +(magnification);
 
     $pointer.hover(function() {
+    if (isMobile()) {
+      return; // Hide the magnifier for mobile devices
+    }
 
     if ($(this).hasClass("work__code") || $(this).hasClass("footer__social-image")) {
         return; // Exit the function, do nothing
