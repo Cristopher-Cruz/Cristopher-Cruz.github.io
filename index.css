@@ -439,11 +439,11 @@ h6 {
     font-weight: 400;
 }
 
-@media(max-width: 900px) {
+/* @media(max-width: 900px) {
     .heading-primary {
-        /* font-size: 6.5rem; */
+        font-size: 6.5rem;
     }
-}
+} */
 
 h2 {
     font-size: var(--font-size-large);
@@ -2003,6 +2003,12 @@ a:is(:link, :active, :visited).active {
         color: white;
     }
 
+}
+
+@media (min-width: 1300px) {
+    .heading-primary {
+        font-size: var(--font-size-huge);
+    }
 }
 
 /* 
