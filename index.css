@@ -441,7 +441,7 @@ h6 {
 
 @media(max-width: 900px) {
     .heading-primary {
-        font-size: 6.5rem;
+        /* font-size: 6.5rem; */
     }
 }
 
@@ -493,7 +493,8 @@ h4 {
 
 @media(max-width: 500px) {
     .heading-primary {
-        font-size: var(--font-size-large);
+        /* font-size: var(--font-size-large); */
+        font-size: 4rem;
     }
 
     h2, h5 {
@@ -502,6 +503,10 @@ h4 {
 
     h3 {
         font-size: var(--font-size-medium);
+    }
+
+    .header {
+        text-align: center;
     }
 }
 
@@ -1062,33 +1067,6 @@ a:is(:link, :active, :visited).active {
     color: white;
 }
 
-.image-description {
-
-    position: absolute;
-    top: 90%;
-    left: 80%;
-    transform: translateY(25%);
-
-}
-
-.image-description p {
-    margin: 1.5rem 0 8.5rem;
-    max-width: var(--container-medium-width);
-    font-family: 'Jost', sans-serif;
-    font-size: var(--font-size-small);
-    color: white;
-}
-
-
-@media(max-width: 500px) {
-    .header {
-        text-align: center;
-    }
-
-    .header__text p {
-        transform: scale(.8);
-    }
-}
 
 /* --------------------------------------- */
 /* ----- Work ----- */
@@ -1897,7 +1875,22 @@ a:is(:link, :active, :visited).active {
 #sideNav li:hover.active:before{background:#f64d28;opacity:1}
 
 
+.image-description {
 
+    position: absolute;
+    top: 90%;
+    left: 80%;
+    transform: translateY(25%);
+
+}
+
+.image-description p {
+    margin: 1.5rem 0 8.5rem;
+    max-width: var(--container-medium-width);
+    font-family: 'Jost', sans-serif;
+    font-size: var(--font-size-small);
+    color: white;
+}
 
 
 @media(max-width: 1920px) {
@@ -1916,6 +1909,44 @@ a:is(:link, :active, :visited).active {
 }
 
 @media(max-width: 1500px) {
+    #sideNav {
+        left: 1.5rem;
+    }
+    .image-description {
+        position: fixed;
+        top: 90%;
+        left: 75%;
+        transform: translateY(25%);
+        max-width: var(--container-medium-width);
+        font-family: 'Jost', sans-serif;
+        font-size: var(--font-size-small);
+        color: white;
+    }
+    
+
+}
+
+  @media(max-width: 1300px) {
+    #sideNav {
+        left: 1.5rem;
+    }
+    .image-description {
+        position: fixed;
+        bottom: 1.5rem;
+        /* left: 1.5rem; */
+        left: 70%;
+
+        padding: 0.5rem;
+        max-width: var(--container-medium-width);
+        font-family: 'Jost', sans-serif;
+        font-size: var(--font-size-small);
+        color: white;
+    }
+    
+
+} 
+
+@media(max-width: 1400px) {
     #sideNav {
         left: 1.5rem;
     }
@@ -1956,20 +1987,51 @@ a:is(:link, :active, :visited).active {
         padding: 2rem;
     }
 
+    .image-description {
+
+        position: absolute;
+        top: 90%;
+        left: 36%;
+        transform: translateY(25%);
+    
+    }
+    .image-description p {
+        margin: 1.5rem 0 8.5rem;
+        max-width: var(--container-medium-width);
+        font-family: 'Jost', sans-serif;
+        font-size: var(--font-size-small);
+        color: white;
+    }
+
 }
 
+/* 
 
-/* @media(max-width: 1240px) {
-    #sideNav {
-        list-style: none;
-        position: fixed;
-        left: 0;
-        top: 50%;
-        margin: -200px 0 0 -1.5rem;
-        z-index: 999999;
-        padding: 35px;
-        opacity: 0;
-        }
+@media(max-width: 500px) {
+    .header {
+        text-align: center;
+    }
+
+    .header__text p {
+        transform: scale(.8);
+    }
+    .image-description {
+
+        position: absolute;
+        top: 90%;
+        left: 80%;
+        transform: translateY(25%);
+    
+    }
+    
+    .image-description p {
+        margin: 1.5rem 0 8.5rem;
+        max-width: var(--container-medium-width);
+        font-family: 'Jost', sans-serif;
+        font-size: var(--font-size-small);
+        color: white;
+    }
 
 } */
+
 
