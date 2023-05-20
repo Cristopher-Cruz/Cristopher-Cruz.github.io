@@ -491,25 +491,6 @@ h4 {
 
 
 
-@media(max-width: 500px) {
-    .heading-primary {
-        /* font-size: var(--font-size-large); */
-        font-size: 4rem;
-    }
-
-    h2, h5 {
-        font-size: var(--font-size-medium-1);
-    }
-
-    h3 {
-        font-size: var(--font-size-medium);
-    }
-
-    .header {
-        text-align: center;
-    }
-}
-
 p {
     margin: var(--gutter-small-1) 0;
     /* color : #821111; */
@@ -573,6 +554,7 @@ body:not(.user-is-tabbing) a:focus{
     display: flex;
     justify-content: space-between;
     /* padding-top: 250px; */
+
 }
 
 
@@ -1991,7 +1973,7 @@ a:is(:link, :active, :visited).active {
 
         position: absolute;
         top: 90%;
-        left: 36%;
+        left: 70%;
         transform: translateY(25%);
     
     }
@@ -2001,43 +1983,88 @@ a:is(:link, :active, :visited).active {
         font-family: 'Jost', sans-serif;
         font-size: var(--font-size-small);
         color: white;
+        text-align: center;
+        
     }
+
+    
+    /* .header {
+        text-align: center;
+        justify-content: center;
+
+    } 
+    .See-my-work {
+        position: relative;
+        top: 70px;
+        display: flex;
+        justify-content: center;
+    }  */
 
 }
 
-@media (min-width: 1300px) {
+@media (max-width: 800px) {
+    .image-description {
+
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transform: translateY(25%);
+    
+    }
+    .image-description p {
+        margin: 1.5rem 0 8.5rem;
+        max-width: var(--container-medium-width);
+        font-family: 'Jost', sans-serif;
+        font-size: var(--font-size-small);
+        color: white;
+        text-align: center;
+        
+    }
+    
+}
+
+
+
+@media(max-width: 580px) {
     .heading-primary {
-        font-size: var(--font-size-huge);
+        font-size: 4rem;
     }
-}
 
-/* 
+    h2, h5 {
+        font-size: var(--font-size-medium-1);
+    }
 
-@media(max-width: 500px) {
+    h3 {
+        font-size: var(--font-size-medium);
+    }
+
     .header {
         text-align: center;
     }
-
-    .header__text p {
-        transform: scale(.8);
+    .See-my-work {
+        position: relative;
+        top: 70px;
+        display: flex;
+        justify-content: center;
+    }
+    .btn{
+        justify-content: center;
     }
     .image-description {
 
         position: absolute;
         top: 90%;
-        left: 80%;
+        left: 25%;
         transform: translateY(25%);
     
     }
-    
     .image-description p {
         margin: 1.5rem 0 8.5rem;
         max-width: var(--container-medium-width);
         font-family: 'Jost', sans-serif;
         font-size: var(--font-size-small);
         color: white;
+        text-align: center;
+        
     }
-
-} */
-
-
+}
