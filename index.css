@@ -1843,7 +1843,7 @@ a:is(:link, :active, :visited).active {
 }
 
 #sideNav.visible{opacity:1}
-#sideNav li{padding:12px;cursor:pointer;-moz-transition:.2s;transition:.2s}
+#sideNav li{padding:8px;cursor:pointer;-moz-transition:.2s;transition:.2s}
 #sideNav li:before{content:" ";display:inline-block;width:30px;height:10px;-moz-border-radius:3px;border-radius:3px;background:#000000;opacity:.2}
 .dark-mode #sideNav li:before{content:" ";display:inline-block;width:30px;height:10px;-moz-border-radius:3px;border-radius:3px;background:#ffffff;opacity:.2}
 
