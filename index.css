@@ -1962,7 +1962,7 @@ a:is(:link, :active, :visited).active {
 
 @media(max-width: 1400px) {
     #sideNav {
-        left: 1.5rem;
+        left: 0rem;
     }
 
 }
