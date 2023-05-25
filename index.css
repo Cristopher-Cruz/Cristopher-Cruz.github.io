@@ -1843,18 +1843,50 @@ a:is(:link, :active, :visited).active {
 }
 
 #sideNav.visible{opacity:1}
-#sideNav li{padding:8px;cursor:pointer;-moz-transition:.2s;transition:.2s}
-#sideNav li:before{content:" ";display:inline-block;width:30px;height:10px;-moz-border-radius:3px;border-radius:3px;background:#000000;opacity:.2}
-.dark-mode #sideNav li:before{content:" ";display:inline-block;width:30px;height:10px;-moz-border-radius:3px;border-radius:3px;background:#ffffff;opacity:.2}
+#sideNav li { 
+    padding:8px;
+    cursor:pointer;
+    -moz-transition:.2s;
+    transition:.2s
+}
+#sideNav li:before {
+    content:" ";
+    display:inline-block;
+    width:30px;
+    height:10px;
+    -moz-border-radius:3px;
+    border-radius:3px;
+    background:#000000;
+    opacity:.2
+}
+.dark-mode #sideNav li:before {
+    content:" ";
+    display:inline-block;
+    width:30px;
+    height:10px;
+    -moz-border-radius:3px;
+    border-radius:3px;
+    background:#ffffff;
+    opacity:.2
+}
 
 #sideNav li.active:before {
     background:#821111;
     opacity:1
 }
 
-#sideNav li:hover{-webkit-transform:scale(1.5);-moz-transform:scale(1.5);transform:scale(1.5)}
-#sideNav li:hover:before{opacity:.5}
-#sideNav li:hover.active:before{background:#f64d28;opacity:1}
+#sideNav li:hover {
+    -webkit-transform:scale(1.5);
+    -moz-transform:scale(1.5);
+    transform:scale(1.5)
+}
+#sideNav li:hover:before {
+    opacity:.5
+}
+#sideNav li:hover.active:before{
+    background:#f64d28;
+    opacity:1
+}
 
 
 .image-description {
@@ -1883,9 +1915,9 @@ a:is(:link, :active, :visited).active {
 }
 
 
-@media(max-width: 1550px) {
+@media(max-width: 1600px) {
     #sideNav {
-        left: 1.5rem;
+        left: 5rem;
     }
 
 }
