@@ -125,6 +125,7 @@ const dayPrices = [
 'Sep 22 2023',
 'Sep 25 2023',
 'Sep 27 2023',
+'Sep 29 2023',
 ];
 
 const curYear = new Date().getFullYear();
