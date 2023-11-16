@@ -148,6 +148,8 @@ const dayPrices = [
 'Nov 06 2023',
 'Nov 08 2023',
 'Nov 10 2023',
+'Nov 13 2023',
+'Nov 15 2023',
 ];
 
 const curYear = new Date().getFullYear();
