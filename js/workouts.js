@@ -1,4 +1,3 @@
-
 const yearsAhead = 1;
 const dayPrices = [
 'Feb 03 2023',
@@ -126,11 +125,11 @@ const dayPrices = [
 'Sep 25 2023',
 'Sep 27 2023',
 'Sep 29 2023',
-'Oct 2 2023',
-'Oct 4 2023',
-'Oct 7 2023',
-'Oct 8 2023',
-'Oct 9 2023',
+'Oct 02 2023',
+'Oct 04 2023',
+'Oct 07 2023',
+'Oct 08 2023',
+'Oct 09 2023',
 'Oct 11 2023',
 'Oct 13 2023',
 'Oct 14 2023',
@@ -156,10 +155,10 @@ const dayPrices = [
 'Nov 25 2023',
 'Nov 27 2023',
 'Nov 29 2023',
-'Dec 1 2023',
-'Dec 4 2023',
-'Dec 6 2023',
-'Dec 9 2023',
+'Dec 01 2023',
+'Dec 04 2023',
+'Dec 06 2023',
+'Dec 09 2023',
 'Dec 12 2023',
 'Dec 14 2023',
 'Dec 16 2023',
@@ -175,59 +174,51 @@ const dayPrices = [
 const curYear = new Date().getFullYear();
 const calEl = document.getElementById("calendar");
 
-
-
 function update(year) {
   console.log(year);
-  
+
   // Clear calendar
   calEl.innerHTML = "";
-  
-  // Build year calendar
+
+  // Build current year calendar
   var calendarize = new Calendarize();
   calendarize.buildYearCalendar(calEl, year);
-  
+
+  // Build last year calendar
+  calendarize.buildYearCalendar(calEl, year - 1, 'last-year');
+
   document.querySelectorAll('.day').forEach(function(el) {
     let dayDateString = el.getAttribute('data-date').substring(4, 15);
     let dayDate = new Date(dayDateString);
     let curday = new Date();
-  
+
     if (dayPrices.includes(dayDateString)) {
       el.classList.add('available');
     } else {
       el.classList.add('unavailable');
     }
-  
+
     if (dayDate > curday) {
       el.classList.add('invalid');
     }
   });
-  
-  // Disable months ahead
+
+  // Disable months ahead for both current and last year
   calEl.querySelectorAll(`.month`).forEach(function(monthEl) {
     const dayEl = monthEl.querySelector('.day');
     const dateStr = dayEl.getAttribute('data-date');
     const date = new Date(dateStr);
     const monthIdx = date.getMonth();
     const year = date.getFullYear();
-    
+
     const now = new Date();
     const monthCur = now.getMonth();
     const yearCur = now.getFullYear();
-    
-    if(year == yearCur && monthIdx > monthCur) {
-      monthEl.classList.add('past');
-    }
-    // Disabling january as my logging began in february
-    if (monthIdx == 0){
+
+    if (year == yearCur && monthIdx > monthCur) {
       monthEl.classList.add('past');
     }
   });
 }
 
-
-
 update(curYear);
-
-
-
