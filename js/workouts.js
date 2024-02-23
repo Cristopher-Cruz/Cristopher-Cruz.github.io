@@ -189,6 +189,7 @@ const dayPrices = [
 'Feb 14 2024',
 'Feb 16 2024',
 'Feb 18 2024',
+'Feb 22 2024',
 ];
 
 const curYear = new Date().getFullYear();
