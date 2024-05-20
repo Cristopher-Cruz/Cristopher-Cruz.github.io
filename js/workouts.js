@@ -228,6 +228,7 @@ const dayPrices = [
 'May 11 2024',
 'May 13 2024',
 'May 15 2024',
+'May 19 2024',
 ];
 
 const curYear = new Date().getFullYear();
