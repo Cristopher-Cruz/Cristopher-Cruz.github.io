@@ -310,6 +310,8 @@ const dayPrices = [
 'Oct 23 2024',
 'Oct 29 2024',
 'Oct 30 2024',
+'Oct 31 2024',
+'Nov 01 2024',
 ];
 
 const curYear = new Date().getFullYear();
