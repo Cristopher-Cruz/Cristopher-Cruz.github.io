@@ -345,6 +345,16 @@ const dayPrices = [
 'Jan 03 2024',
 'Jan 06 2024',
 'Jan 07 2024',
+'Jan 09 2024',
+'Jan 10 2024',
+'Jan 11 2024',
+'Jan 13 2024',
+'Jan 14 2024',
+'Jan 15 2024',
+'Jan 17 2024',
+'Jan 20 2024',
+'Jan 21 2024',
+'Jan 22 2024',
 ];
 
 const curYear = new Date().getFullYear();
